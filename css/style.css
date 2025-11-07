@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 50px;
+    z-index: 1000;
+    flex-shrink: 0;
+}
+
+.fullscreen-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -10%;
+}
+
+.fullscreen-bg {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #666;
+}
+
+.nav-link.active {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Page System */
+.page {
+    display: none;
+    flex: 1;
+}
+
+.page.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Page Content Styling */
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.page-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.page-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+    max-width: 600px;
+}
+
+/* ME Page Styling */
+.me-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info Page Styling */
+.info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.info-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-artwork {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.info-text-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.info-text-section p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: left;
+    max-width: 1200px;
+    font-family: Arial, sans-serif;
+    font-weight: 1000;
+}
+
+.info-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.info-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.info-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #555;
+    text-align: center;
+}
+
+.info-details {
+    margin: 40px 0;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 5px solid #333;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+.detail-value {
+    color: #666;
+    font-size: 16px;
+}
+
+.info-description {
+    font-style: italic;
+    background: #fff9e6;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #f0c14b;
+    margin-top: 30px;
+}
+
+/* Contact Page Styling */
+.contact-container {
+    flex: 1;
+    display: flex;
+    height: 100%;
+}
+
+.contact-text-section {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.contact-content {
+    max-width: 100%;
+}
+
+.contact-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.9;
+}
+
+.contact-image-section {
+    flex: 0 0 50%;
+}
+
+.contact-image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 28px;
+    }
+    
+    .fullscreen-bg {
+        width: 90%;
+        height: 90%;
+    }
+    
+    .page-content {
+        padding: 30px 20px;
+    }
+    
+    .page-content h1 {
+        font-size: 36px;
+    }
+    
+    .me-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-text-section {
+        flex: 0 0 auto;
+        padding: 30px 20px;
+    }
+    
+    .contact-content h1 {
+        font-size: 32px;
+    }
+    
+    .contact-content > p {
+        font-size: 16px;
+    }
+    
+    .contact-info p {
+        font-size: 16px;
+    }
+    
+    .contact-image-section {
+        flex: 0 0 300px;
+        padding: 20px;
+    }
+    
+    .info-image-section {
+        flex: 0 0 35%;
+        padding: 20px;
+    }
+    
+    .info-text-section {
+        padding: 30px 20px;
+    }
+    
+    .info-text-section p {
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.6;
+    }
+    
+    .info-details {
+        margin: 30px 0;
+        padding: 20px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .contact-form {
+        max-width: 100%;
+    }
+}
