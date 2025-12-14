@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-festifull: 'Festifull', cursive;
+    --font-awesome-korea: 'Awesome South Korea', sans-serif;
+    --font-blackest: 'Blackest', sans-serif;
 }
 
 html, body {
@@ -10,6 +14,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
@@ -36,12 +41,44 @@ body {
     top: -10%;
 }
 
+.home-content-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .fullscreen-bg {
-    width: 80%;
-    height: 80%;
+    width: 80vw;
+    height: 80vh;
     object-fit: contain;
     object-position: top;
     display: block;
+}
+
+.home-intro-text {
+    position: absolute;
+    bottom: -5%;
+    right: 5%;
+}
+
+.home-intro-text p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #000;
+}
+
+.festifull-font {
+    font-family: var(--font-festifull);
+}
+
+.awesome-korea-font {
+    font-family: var(--font-awesome-korea);
+    font-weight: 500;
+}
+
+.blackest-font {
+    font-family: var(--font-blackest);
+    font-weight: 200;
 }
 
 .nav-menu {
@@ -109,6 +146,51 @@ body {
 }
 
 /* ME Page Styling */
+/* ME Page Styling */
+.me-container {
+    flex: 1;
+    padding: 0;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork-collage {
+    /* Masonry grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-auto-rows: 8px; /* base row height for span calc */
+    grid-auto-flow: dense;
+    gap: 0; /* no space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    place-content: center; /* center the grid within max width */
+    padding: 0 10px; /* minimal side padding to avoid touching edges */
+}
+
+.artwork-item {
+    position: relative;
+    overflow: hidden;
+    /* avoid breaks inside items for some browsers */
+    break-inside: avoid;
+}
+
+
+
+.artwork-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Remove random rotations/sizing to achieve tight masonry with no gaps */
+
+.artwork-item:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
 .me-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -162,14 +244,16 @@ body {
     justify-content: center;
     align-items: center;
     background: white;
+    padding-left: 10px;
+    padding-bottom: 70px;
 }
 
 .info-text-section p {
-    font-size: 25px;
+    font-size: 28px;
     line-height: 1.5;
     color: #000000;
     text-align: left;
-    max-width: 1200px;
+    max-width: 1242px;
     font-family: Arial, sans-serif;
     font-weight: 1000;
 }
@@ -339,9 +423,16 @@ body {
         font-size: 36px;
     }
     
-    .me-gallery {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .me-gallery,
+    .artwork-collage {
+        gap: 0;
+        padding: 0 6px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 6px;
+    }
+    
+    .me-container {
+        padding: 10px;
     }
     
     .contact-container {
