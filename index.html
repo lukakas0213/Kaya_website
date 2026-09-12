@@ -6,130 +6,68 @@
     <title>Kaya Lee - Portfolio</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-    <link href="https://fonts.cdnfonts.com/css/festifull" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/awesome-south-korea" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/blackest" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="nav-menu">
-            <li><a href="#" class="nav-link" data-page="me">ME</a></li>
-            <li><a href="#" class="nav-link" data-page="info">Info</a></li>
-            <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <!-- 디폴트 첫 화면 (Home) -->
-    <div id="home-page" class="page active">
-        <div class="fullscreen-container">
-            <div class="home-content-wrapper">
-                <img src="images/home/elements/background.png" alt="Kaya Lee Portfolio Background" class="fullscreen-bg">
-                <div class="home-intro-text">
-                    <p>Hi! My name is Kaya Lee.</p>
-                    <p>I explore the language of emotions</p>
-                    <p>through <span class="festifull-font"><span style="color: #e5232c;">c</span><span style="color: #3bbff0;">o</span><span style="color: #ffdd03;">l</span><span style="color: #00FF00;">o</span><span style="color: #972cda;">r</span><span style="color: #796e3c;">s</span></span>, <span class="awesome-korea-font">lines</span>, and <span class="blackest-font">silence</span>.</p>
-                </div>
+    <div class="viewport">
+        <div class="stage">
+            <nav class="navbar">
+                <a href="#" class="nav-link" data-page="me" style="left: 841px; top: 60px"><img id="nav-icon-me" class="nav-icon" src="images/home/search_bar/ME.png" width="68" height="36" alt="ME"></a>
+                <a href="#" class="nav-link" data-page="info" style="left: 966px; top: 59px"><img id="nav-icon-info" class="nav-icon" src="images/home/search_bar/Info.png" width="85" height="38" alt="Info"></a>
+                <a href="#" class="nav-link" data-page="contact" style="left: 1101px; top: 60px"><img id="nav-icon-contact" class="nav-icon" src="images/home/search_bar/Contact.png" width="183" height="37" alt="Contact"></a>
+            </nav>
+
+            <!-- Home -->
+            <div id="home-page" class="page active">
+                <img class="el" style="left: 65px; top: 65px" src="images/home/elements/background.png" width="1220" height="513" alt="">
+                <img class="el" style="left: 580px; top: 549px" src="images/home/text/kl.png" width="716" height="176"
+                     alt="Hi! My name is Kaya Lee. I explore the language of emotions through colors, lines, and silence.">
+            </div>
+
+            <!-- ME -->
+            <div id="me-page" class="page">
+                <img class="el" style="left: 160px;  top: 204px"  src="images/me/artwork/1.png"  width="201" height="293" alt="Artwork 1">
+                <img class="el" style="left: 370px;  top: 146px"  src="images/me/artwork/2.png"  width="153" height="203" alt="Artwork 2">
+                <img class="el" style="left: 536px;  top: 186px"  src="images/me/artwork/3.png"  width="218" height="164" alt="Artwork 3">
+                <img class="el" style="left: 766px;  top: 186px"  src="images/me/artwork/4.png"  width="348" height="261" alt="Artwork 4">
+                <img class="el" style="left: 1126px; top: 290px"  src="images/me/artwork/5.png"  width="184" height="157" alt="Artwork 5">
+                <img class="el" style="left: 61px;   top: 507px"  src="images/me/artwork/6.png"  width="301" height="233" alt="Artwork 6">
+                <img class="el" style="left: 370px;  top: 358px"  src="images/me/artwork/7.png"  width="381" height="384" alt="Artwork 7">
+                <img class="el" style="left: 766px;  top: 460px"  src="images/me/artwork/8.png"  width="213" height="284" alt="Artwork 8">
+                <img class="el" style="left: 988px;  top: 459px"  src="images/me/artwork/9.png"  width="226" height="204" alt="Artwork 9">
+                <img class="el" style="left: 987px;  top: 675px"  src="images/me/artwork/12.png" width="288" height="435" alt="Artwork 12">
+                <img class="el" style="left: 159px;  top: 750px"  src="images/me/artwork/10.png" width="381" height="286" alt="Artwork 10">
+                <img class="el" style="left: 551px;  top: 750px"  src="images/me/artwork/11.png" width="428" height="320" alt="Artwork 11">
+                <img class="el" style="left: 257px;  top: 1044px" src="images/me/artwork/13.png" width="266" height="387" alt="Artwork 13">
+                <img class="el" style="left: 539px;  top: 1081px" src="images/me/artwork/14.png" width="416" height="312" alt="Artwork 14">
+            </div>
+
+            <!-- Info -->
+            <div id="info-page" class="page">
+                <img class="el" style="left: 64px; top: 140px" src="images/info/tbn.png" width="1231" height="295" alt="Kaya Lee artwork">
+                <img class="el" style="left: 64px; top: 485px" src="images/info/body text.png" width="1219" height="218"
+                     alt="Passionate and empathetic Art Therapy undergraduate with clinical and community-based experience across the U.S. and South Korea. Skilled in facilitating creative therapeutic activities for diverse populations, including pediatric and neurodiverse clients. Recognized for leading international outreach programs and mental health campaigns. Committed to integrating art and psychology to promote preventive mental wellness.">
+            </div>
+
+            <!-- Contact -->
+            <div id="contact-page" class="page">
+                <a class="el contact-link" style="left: 85px; top: 183px" href="mailto:kayakayakayka.lee@gmail.com">
+                    <img src="images/contact/main/email.png" width="428" height="77" alt="email kayakayakayka.lee@gmail.com">
+                </a>
+                <a class="el contact-link" style="left: 84px; top: 317px" href="https://www.linkedin.com/in/kyeongminkayalee" target="_blank" rel="noopener">
+                    <img src="images/contact/main/linkedin.png" width="562" height="77" alt="LinkedIn www.linkedin.com/in/kyeongminkayalee">
+                </a>
+                <a class="el contact-link" style="left: 83px; top: 449px" href="https://www.instagram.com/moooooodify" target="_blank" rel="noopener">
+                    <img src="images/contact/main/instagram.png" width="209" height="75" alt="Instagram @moooooodify">
+                </a>
+                <a class="el contact-link" style="left: 84px; top: 564px" href="https://bit.ly/4kW6X20" target="_blank" rel="noopener">
+                    <img src="images/contact/main/resume.png" width="321" height="75" alt="Resume https://bit.ly/4kW6X20">
+                </a>
+                <img class="el" style="left: 754px; top: 162px" src="images/contact/main/img.png" width="537" height="516" alt="Kaya Lee at work">
             </div>
         </div>
     </div>
-    
-    <!-- ME 페이지 -->
-    <div id="me-page" class="page">
-        <div class="me-container">
-            <div class="artwork-collage">
-                <div class="artwork-item">
-                    <img src="images/me/artwork/1.png" alt="Artwork 1">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/2.png" alt="Artwork 2">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/3.png" alt="Artwork 3">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/4.png" alt="Artwork 4">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/5.png" alt="Artwork 5">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/6.png" alt="Artwork 6">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/7.png" alt="Artwork 7">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/8.png" alt="Artwork 8">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/9.png" alt="Artwork 9">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/10.png" alt="Artwork 10">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/11.png" alt="Artwork 11">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/12.png" alt="Artwork 12">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/13.png" alt="Artwork 13">
-                </div>
-                <div class="artwork-item">
-                    <img src="images/me/artwork/14.png" alt="Artwork 14">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Info 페이지 -->
-    <div id="info-page" class="page">
-        <div class="info-container">
-            <div class="info-image-section">
-                <img src="images/info/tbn.png" alt="Kaya Lee Artwork" class="info-artwork">
-            </div>
-            <div class="info-text-section">
-                <p>
-                    Passionate and empathetic Art Therapy undergraduate with clinical and community-based
-                    experience across the U.S, and South Korea. Skilled in facilitating creative therapeutic 
-                    activities for diverse populations, including pediatric and neurodivers clinets.
-                    Recognized for leading international outreach programs and mental health campaigns.
-                    Committed to integrating art and psychology to promote preventive mental wellness.
-                </p>
-            </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Contact 페이지 -->
-    <div id="contact-page" class="page">
-        <div class="contact-container">
-            <div class="contact-text-section">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p>email<br>
-                        kayakayakayka.lee@gmail.com<br><br>
-                    
-                        LinkedIn<br>
-                        www.linkedin.com/in/kyeongminkayalee<br><br>
-                    
-                        Instgram<br>
-                        @moooooodify<br><br>
-                    
-                        Resume<br>
-                        https://bit.ly/4kW6X20<br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-image-section">
-                <img src="images/contact/main/img.png" alt="Contact Image" class="contact-image">
-            </div>
-        </div>
-    </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
