@@ -25,14 +25,14 @@ const NAV_ASSETS = {
         contact: { src: 'images/me/search_bar/Contact.png', left: 1101, top: 60, width: 183, height: 37 }
     },
     info: {
-        me: { src: 'images/info/3.%20search%20bar/ME.png', left: 841, top: 60, width: 68, height: 36 },
-        info: { src: 'images/info/3.%20search%20bar/Info.png', left: 964, top: 51, width: 88, height: 54 },
-        contact: { src: 'images/info/3.%20search%20bar/Contact.png', left: 1101, top: 60, width: 183, height: 37 }
+        me: { src: 'images/info/search_bar/ME.png', left: 841, top: 60, width: 68, height: 36 },
+        info: { src: 'images/info/search_bar/Info.png', left: 964, top: 51, width: 88, height: 54 },
+        contact: { src: 'images/info/search_bar/Contact.png', left: 1101, top: 60, width: 183, height: 37 }
     },
     contact: {
-        me: { src: 'images/contact/4.%20search%20bar/ME.png', left: 841, top: 60, width: 68, height: 36 },
-        info: { src: 'images/contact/4.%20search%20bar/Info.png', left: 966, top: 59, width: 84, height: 38 },
-        contact: { src: 'images/contact/4.%20search%20bar/contact.png', left: 1111, top: 51, width: 162, height: 55 }
+        me: { src: 'images/contact/search_bar/ME.png', left: 841, top: 60, width: 68, height: 36 },
+        info: { src: 'images/contact/search_bar/Info.png', left: 966, top: 59, width: 84, height: 38 },
+        contact: { src: 'images/contact/search_bar/Contact.png', left: 1111, top: 51, width: 162, height: 55 }
     }
 };
 
